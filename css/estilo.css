@@ -1,0 +1,316 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+header{
+	background-image: url('../imagens/bolo-kitkat.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 30rem;
+}
+body{
+	font-family: Roboto, "sans-serif";
+	color: #382718;
+}
+h1{
+	font-family: Bataler, "sans-serif";
+	font-size: 3em;
+	color: #F77276;
+	
+	display: table;
+	text-align: center;
+	margin: 0 auto;
+	border-bottom: 2px solid #8CE0E3;
+}
+h3, h5{
+	font-size: 1em;
+	text-align: center;
+	padding: 1rem 0;
+}
+h5{
+	padding: 5px 0 30px 0;
+	color: #701800;
+}
+footer{
+	width: 100%;
+	height: 4em;
+}
+footer div{
+	text-align: center;
+	padding: 1.5rem 0;
+	background-color: #F77276;
+}
+.menu{
+	margin: 0 auto;
+	text-transform: uppercase;
+	background-color: #F77276;
+
+	/*
+	width: 100%;
+	height: 3.5rem;
+
+	padding-top: 0.75rem;*/
+}
+.menu > ul {
+	margin-right: 85px;
+	display: flex;
+	justify-content: flex-end;
+}
+.menu > ul li{
+	list-style: none;	
+	padding: 20px 15px;
+}
+.menu a{
+	font-weight: bold;
+	font-size: 0.90em;
+	color: #701800;
+}
+.menu a:hover{
+	color: #382718;
+	border-bottom: 0.3rem solid #382718;
+}
+/* SLIDE DE IMAGENS - INÍCIO */
+.slidershow{
+	margin: 0 auto;
+	width: 1025px;
+	height: 400px;
+	overflow: hidden;
+}
+.middle{
+	margin-top: 30px;
+}
+.navigation{
+	position: relative;
+	bottom: 90px;
+	left: 73%;
+	transform: translateX(-50%);
+	display: flex;
+}
+.barra{
+	width: 100px;
+	height: 80px;
+	
+	margin: 0 5px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.barra img{
+	width: 96px;
+	height: 76px;
+}
+.barra:hover{
+	border: 2px solid #F77276;
+}
+input[name="r"]{
+	position: absolute;
+	visibility: hidden;
+}
+.slides{
+	width: 500%;
+	height: 100%;
+	display: flex;
+}
+.slide{
+	width: 20%;
+	transition: 0.6s;
+}
+.slide img{
+	width: 100%;
+	height: 100%;
+}
+#r1:checked ~ .s1{
+	margin-left: 0;
+}
+#r2:checked ~ .s1{
+	margin-left: -20%;
+}
+#r3:checked ~ .s1{
+	margin-left: -40%;
+}
+#r4:checked ~ .s1{
+	margin-left: -60%;
+}
+#r5:checked ~ .s1{
+	margin-left: -80%;
+}
+/* SLIDE DE IMAGENS - FIM */
+.logo{
+	float: right;
+	margin: 20px 158px 0 0;
+}
+.logo img{
+	width: 26rem;
+	height: 26rem;
+}
+.container{
+	margin: 4em auto;
+	width: 85%;
+}
+.container h1{
+	text-align: center;
+}
+.sobre{
+	width: 100%;
+	background-color: #CBEFF4;
+	text-align: center;
+	padding: 5rem 3rem;
+	margin-top: 5em;
+}
+.produtos section{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+	
+	margin: 4rem 8rem;
+}
+.produto p{
+	padding: 1rem;
+	text-align: center;
+}
+.produto img{
+	width: 17rem;
+	height: 17rem;
+	
+	border-radius: 150px;
+	box-shadow: 3px 3px 3px #F77276;
+}
+.produtos-icones{
+	margin: 0 auto;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.produtos-icones a{
+	text-decoration: none;
+	color: #701800;
+}
+.produtos-icones span{
+	width: 5em;
+	height: 5em;
+}
+.fa{
+	font-size: 40px;
+	padding: 0 20px;
+}
+.fa:hover{
+	color: #F77276;
+}
+.bolos, .doces, .docinhos{
+	margin-top: 60px;
+	padding: 30px;
+	background-color: #CBEFF4;
+}
+input[type=checkbox]{
+	display: none;
+}
+#chk-bolos:checked + .bolos, #chk-doces:checked + .doces, #chk-docinhos:checked + .docinhos{
+	display: none;
+}
+.galeria{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 10px;
+	align-items: center;
+	margin: 10px auto;
+
+}
+.galeria img{
+	width: 100%;
+	height: auto;
+}
+.galeria a:hover{
+	grid-column: auto / span 2;
+	border: 3px solid #701800;
+}
+.form-contato{
+	margin: 0 auto;
+	width: 73%;
+}
+.form-contato #fnome, #femail, #ftelefone, #fidade, #ftexto, input[type=submit]{
+	border: 2px solid #CBEFF4;
+	border-radius: 5px;
+}
+.form-contato #fnome, #femail, #ftelefone, #fidade{
+	margin: 0  0 15px 10px;
+	height: 25px;
+}
+.form-contato #fnome, #femail{
+	width: 350px;
+}
+.form-contato #lemail{
+	width: 350px;
+	margin-left: 10px;
+}
+.form-contato #ftelefone{
+	width: 120px;
+}
+.form-contato #fidade{
+	width: 40px;
+}
+.form-contato #ftexto{
+	width: 100%;
+	height: 200px;
+	box-sizing: border-box;
+	resize: none;
+	margin-top: 10px;
+}
+.form-contato input[type=submit]{
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	background-color: #CBEFF4;
+	margin-top: 10px;
+	text-transform: uppercase;
+	color: #F77276;
+	font-weight: bold;
+	float: right;
+}
+.mensagem{
+	background-color: #701800;
+}
+.mensagem article{
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	padding: 4rem;
+
+	color: #fff;
+}
+.midias{
+	color: #fff;
+	display: grid;
+	grid-template-columns: 10% repeat(3, 1fr) 10%;
+	align-content: center;
+
+	margin-top: 2.5rem;
+	background-color: #382718;
+}
+.midias section, .midias a, .midias-whats h3{
+	color: #fff;
+}
+.midia-insta{
+	grid-column: 2;
+}
+.midia-insta img, .midia-face img, .midia-whats img{
+	width: 5.5rem;
+	height: 5.5rem;
+}
+.midia-insta, .midia-face, .midia-whats{
+	padding: 2rem;
+}
+.midias i, .midias img{ 
+	float: left;
+}
+.midia{
+	margin-left: 1rem;
+	float: left;
+}
